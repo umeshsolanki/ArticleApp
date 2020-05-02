@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">DiscoverIndia</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="share">Share</string>
+    <string name="comment">Comment</string>
+    <string name="like">Like</string>
+    <string name="title">Title</string>
+    <string name="likes_display"> %d Likes</string>
+    <string name="detailTransition">detail_transition</string>
+    <string name="parallaxImageTarget">parallaxTarget</string>
+</resources>

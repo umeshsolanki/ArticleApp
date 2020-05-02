@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_marginBottom="@dimen/nav_bar_height"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/targetPost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/card_margin"
+            android:elevation="@dimen/card_elevation"
+            android:padding="@dimen/card_padding"
+            app:cardCornerRadius="@dimen/card_radii"
+            app:cardElevation="@dimen/card_elevation">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="@string/title"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/image"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter"
+                    android:transitionName="@string/detailTransition"
+                    android:src="@drawable/loading"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/title"
+                    tools:srcCompat="@drawable/loading" />
+
+                <LinearLayout
+                    android:id="@+id/actionsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/image">
+
+                    <TextView
+                        android:id="@+id/like"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/score_height"
+                        android:layout_weight="1"
+                        android:background="@color/black"
+                        android:gravity="center_vertical"
+                        android:text="@string/like"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF" />
+
+
+                    <TextView
+                        android:id="@+id/comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/score_height"
+                        android:layout_weight="1"
+                        android:background="@color/black"
+                        android:gravity="center_vertical"
+                        android:text="@string/comment"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF" />
+
+                    <TextView
+                        android:id="@+id/share"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/score_height"
+                        android:layout_weight="1"
+                        android:background="@color/black"
+                        android:gravity="center_vertical"
+                        android:text="@string/share"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF" />
+
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/downloadButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/image"
+                    app:srcCompat="@drawable/ic_file_download_black_24dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</layout>
